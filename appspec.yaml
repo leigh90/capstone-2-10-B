@@ -1,0 +1,10 @@
+version: 0.0
+
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:776657383134:task-definition/frugal-server-ksce05-capstone2-taskdefinition:1"
+        LoadBalancerInfo:
+          ContainerName: "myapp-container"
+          ContainerPort: 3000
