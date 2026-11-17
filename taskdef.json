@@ -1,0 +1,21 @@
+{
+  "family": "myapp-task",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "myapp-container",
+      "image": "776657383134.dkr.ecr.us-east-1.amazonaws.com/capstone-2-hearth:latest",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::776657383134:role/ecsTaskExecutionRole"
+}
